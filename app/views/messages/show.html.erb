@@ -1,0 +1,16 @@
+<h1>This is a message in a conversation!</h1>
+<!-- app/views/conversations/show.html.erb -->
+<h1>Conversation with AI</h1>
+
+<div>
+  <p><strong>AI:</strong> <%= @response %></p>
+</div>
+
+<%= form_with url: conversations_path, method: :post, local: true do |form| %>
+  <div>
+    <%= form.label :message, "Your Message:" %>
+    <%= form.text_area :message, rows: 5 %>
+    <%= form.submit "Send" %>
+  </div>
+<% end %>
+<!-- app/views/messages/show.html.erb -->

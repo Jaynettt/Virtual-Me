@@ -1,0 +1,192 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ .question-card {
+  border: 1px solid #a18cd1;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px auto;
+  background: linear-gradient(135deg, #f8f9fa, #e3e8f0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.question-card p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.answer-card {
+  border: 1px solid #c5a3e2;
+  border-radius: 6px;
+  padding: 12px;
+  margin-top: 8px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+}
+
+.answer-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.styled-button {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #fff;
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.3s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.styled-button:hover {
+  background: linear-gradient(135deg, #9673c1, #e89ccf);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.styled-button:active {
+  background: linear-gradient(135deg, #805da3, #d785ba);
+  box-shadow: none;
+}
+.answer-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #a18cd1;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #f8f9fa, #e3e8f0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.answer-form h1, .answer-form h3 {
+  text-align: center;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-label {
+  font-size: 16px;
+  color: #555;
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 14px;
+  resize: none;
+}
+
+.styled-button {
+  /* Same styling as previously defined for consistency */
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #fff;
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.3s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.styled-button:hover {
+  background: linear-gradient(135deg, #9673c1, #e89ccf);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.styled-button:active {
+  background: linear-gradient(135deg, #805da3, #d785ba);
+  box-shadow: none;
+}
+.question-bubble {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  padding: 16px 24px;
+  max-width: 600px;
+  background: #e3e8f0;
+  border-radius: 25px;
+  border: 1px solid #a18cd1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.question-bubble h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.answer-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #f8f9fa, #e3e8f0);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.answer-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  background: #fff;
+  border: 1px solid #c5a3e2;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 50px; /* Reduced width */
+  width: 100%; /* Ensure it takes up full width of its parent container */
+}
+
+.form-textarea {
+  width: 100%;
+  max-width: 380px; /* Adjust the width to fit the smaller answer card */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 14px;
+  resize: none;
+}
+.dynamic-textarea {
+  min-height: 100px;
+  resize: none;
+  overflow: hidden;
+  width: 100%; /* Ensure it takes the full width of the container */
+  font-size: 16px;
+  padding: 10px;
+}

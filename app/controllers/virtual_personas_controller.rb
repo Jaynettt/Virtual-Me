@@ -1,0 +1,2 @@
+class VirtualPersonasController < ApplicationController
+end

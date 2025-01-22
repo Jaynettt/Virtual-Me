@@ -1,0 +1,16 @@
+
+<div class="question-bubble">
+  <h3><%= @question.content %></h3>
+</div>
+<%= form_with(model: [@question, @answer], local: true) do |form| %>
+  <div>
+    <%= form.label :content, "Your Answer:" %><br>
+    <%= form.text_area :content, rows: 5, placeholder: "Type your answer here...", class: "dynamic-textarea" %>
+  </div>
+  <div>
+    <%= form.submit "Submit Answer" %>
+  </div>
+<% end %>
+
+  </div>
+<% end %>

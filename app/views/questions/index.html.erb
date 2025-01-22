@@ -1,0 +1,20 @@
+
+
+<% @questions.each do |question| %>
+  <div class="question-card">
+    <p><strong>Question:</strong> <%= question.content %></p>
+
+   
+    <% if question.answers.any? %>
+      <% question.answers.each do |answer| %>
+        <div class="answer-card">
+          <p> <%= answer.content %></p>
+        </div>
+      <% end %>
+    <% else %>
+      
+    <% end %>
+
+    <%= link_to "Answer", new_question_answer_path(question),  class: 'styled-button' %>
+  </div>
+<% end %>

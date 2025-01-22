@@ -1,0 +1,26 @@
+<script>
+  function subscribe(event) {
+    const json = parse(event);
+
+    if (json?.source !== 'readyplayerme') {
+      return;
+    }
+
+    if (json.eventName === 'v1.avatar.exported') {
+      const avatarUrl = json.data.url;
+      
+      // Send the avatar URL to the server
+      fetch('/profiles/save_avatar', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': '<%= form_authenticity_token %>'
+        },
+        body: JSON.stringify({ avatar_url: avatarUrl })
+      });
+
+      document.getElementById('avatarUrl').innerHTML = `Avatar URL: ${avatarUrl}`;
+      document.getElementById('frame').hidden = true;
+    }
+  }
+</script>
